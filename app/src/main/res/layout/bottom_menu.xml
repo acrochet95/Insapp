@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- FOOTER NAVIGATION -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/footer_border"
+        android:background="@color/barre_division"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/footer" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:id="@+id/footer">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tab1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/newsB"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:padding="5dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:src="@drawable/news"
+                android:clickable="true" />
+            <TextView
+                android:id="@+id/newsText"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:textSize="8dp"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:text="News" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tab2"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/eventsB"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:padding="6dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:src="@drawable/calendar"
+                android:clickable="true" />
+            <TextView
+                android:id="@+id/eventsText"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:textSize="8dp"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:text="Events" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tab3"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/assosB"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:padding="5dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:src="@drawable/associations"
+                android:clickable="true" />
+            <TextView
+                android:id="@+id/assosText"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Associations" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tab4"
+            android:gravity="center">
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp">
+
+                <ImageView
+                    android:id="@+id/notifB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/megaphone"
+                    android:clickable="true" />
+
+                <LinearLayout
+                    android:layout_alignRight="@id/notifB"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/nb_notifs"
+                        android:layout_width="15dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/notif_cercle"
+                        android:textColor="@color/white"
+                        android:text="" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_below="@id/notifB"
+                android:id="@+id/notifText"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:textSize="8dp"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:text="Notifications" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tab5"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/profilB"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:padding="5dp"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:src="@drawable/user"
+                android:clickable="true" />
+            <TextView
+                android:id="@+id/profilText"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Moi" />
+
+        </LinearLayout>
+    </LinearLayout>
+</merge>

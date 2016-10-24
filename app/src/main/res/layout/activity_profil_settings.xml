@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="fr.insa_rennes.insa.ProfilSettings">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_red"
+        android:baselineAligned="false"
+        android:id="@+id/header">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cross"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cross"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/heading_text"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="Mon Profil" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/submit"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/check"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageProfil"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/barre_division"
+        app:civ_fill_color="@color/white"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/imageProfil"
+        android:layout_marginBottom="50dp">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@id/content"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Nom"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <EditText
+                            android:id="@+id/nom"
+                            android:gravity="right|center_vertical"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:background="@color/white"
+                            android:layout_width="250dp"
+                            android:layout_height="fill_parent"
+                            android:inputType="textCapSentences" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Promotion"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <Spinner
+                            android:layout_width="250dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/promo"
+                            android:spinnerMode="dropdown"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Genre"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <Spinner
+                            android:layout_width="250dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/genre"
+                            android:spinnerMode="dropdown"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Email"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:gravity="right|center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:background="@color/white"
+                            android:layout_width="250dp"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="fill_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Notifications"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <ToggleButton
+                            android:id="@+id/notifs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOn="OUI"
+                            android:textOff="NON"
+                            android:checked="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Ajout évènement au calendrier"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <ToggleButton
+                            android:id="@+id/addEvents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textOn="OUI"
+                            android:textOff="NON"
+                            android:checked="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Description"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="right|center_vertical">
+
+                        <TextView
+                            android:id="@+id/nb_caractere"
+                            android:gravity="right|center_vertical"
+                            android:background="@color/white"
+                            android:textColor="@color/grey"
+                            android:textSize="16sp"
+                            android:layout_width="150dp"
+                            android:layout_height="fill_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/barre_division"/>
+
+
+                <EditText
+                    android:id="@+id/description"
+                    android:gravity="top|left"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:maxLength="120"
+                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/barre_division"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/theme_red"
+            android:text="Supprimer"
+            android:layout_height="48dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/barre_division"/>
+
+    </LinearLayout>
+</RelativeLayout>
