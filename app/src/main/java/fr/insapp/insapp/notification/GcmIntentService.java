@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
@@ -150,6 +151,7 @@ public class GcmIntentService extends IntentService {
                         .setStyle(new NotificationCompat.BigTextStyle().bigText(msg.getMessage()))
                         .setContentText(msg.getMessage())
                         .setAutoCancel(true)
+                        .setLights(getResources().getColor(R.color.theme_red), 500, 1000)
                         .setDefaults(android.app.Notification.DEFAULT_SOUND);
 
         PowerManager pm = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
