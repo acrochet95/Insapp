@@ -159,7 +159,7 @@ public class Signin extends Activity {
 
         // set dialog message
         alertDialogBuilder
-                .setMessage("Si tu es deja inscrit sur un autre telephone, tu seras deconnecté de ce dernier. Un compte par telephone. Veux-tu continuer ?")
+                .setMessage("Si ton compte existe déjà sur un autre téléphone, tu seras deconnecté(e) de ce dernier. Tu ne perdras aucune donnée. Souhaites-tu continuer ?")
                 .setCancelable(false)
                 .setPositiveButton("OUI",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogAlert,int id) {
@@ -196,8 +196,8 @@ public class Signin extends Activity {
                                                 Toast.makeText(Signin.this, "Problème de connexion", Toast.LENGTH_SHORT).show();
                                         }
                                         else if(HttpPost.responseCode >= 400 && HttpPost.responseCode < 500){
-                                            if(!output.isEmpty())
-                                                Toast.makeText(Signin.this, output, Toast.LENGTH_LONG).show();
+                                            //if(!output.isEmpty())
+                                            Toast.makeText(Signin.this, "Erreur : " + output, Toast.LENGTH_LONG).show();
                                         }
 
                                     } catch (Exception e){
